@@ -1,24 +1,33 @@
-# README
+# PubdomApi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+パブリックドメイン用のキュレーションサイトのAPI
 
 * Ruby version
 
-* System dependencies
+```
+ruby 2.3.0p0
+```
 
-* Configuration
+* Rails version
 
-* Database creation
+```
+Rails 5.0.0.1
+```
 
-* Database initialization
+* vagrant login
 
-* How to run the test suite
+```
+ssh api
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* How to run the test suite develop
 
-* Deployment instructions
+```
+rails s -b 0.0.0.0
+```
 
-* ...
+* if you check browser
+
+```
+http://192.168.33.11:3000/
+```
