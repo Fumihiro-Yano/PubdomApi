@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   namespace :admin, { format: 'json' }  do
     get 'signup' => 'users#new'
-    get 'get_login_user' => 'sessions#get_login_user'
+    get 'login_user_info' => 'sessions#login_user_info'
+    get 'user_authenticate' => 'sessions#user_authenticate'
     resources :users
   end
 
