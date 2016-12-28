@@ -15,4 +15,29 @@ class Admin::SessionsController < Admin::Base
     end
   	render json: @authenticate
   end
+
+  def remember
+    @user = User.find_by(id: params[:id])
+    if ! @user
+      render json: false, status:404
+      return
+    end
+    @result = @user.remember
+    if ! @result
+      render json: false, status:404
+      return
+    end
+    render json: @result
+  end
+
+  def authenticated_token
+    @user = User.find_by(id: params[:id])
+    if ! @user
+      render json: false, status:404
+      return
+    end
+    @result = @user.authenticated?(params[:remember_token])
+    render json: @result
+  end
+
 end
