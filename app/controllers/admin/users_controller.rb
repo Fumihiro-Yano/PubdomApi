@@ -1,5 +1,5 @@
 class Admin::UsersController < Admin::Base
-  before_action :check_api_key  
+  #before_action :check_api_key  
   
   def index
   	@users = User.all
